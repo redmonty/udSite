@@ -28,7 +28,7 @@
     &__b-margin-until-medium {
         margin-bottom: 1rem;
     }
-    @mixin md {
+    @mixin md { 
 
         &__b-margin-until-medium {
             margin-bottom: 0;
@@ -47,10 +47,22 @@
                 width: 63%;
             }
         }
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
     }
 
     &--gutters {
         margin-right: -65px;
+
+        &-large {
+            margin-right: -100px;
+            & > div {
+                padding-right: 100px;
+                box-sizing: border-box;
+            }
+        }
     }
 
     &--gutters > div {
