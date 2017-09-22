@@ -1,0 +1,65 @@
+.wrapper {
+    overflow: hidden;
+    padding: 0 18px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; 
+
+    &--medium {
+        max-width: 976px;
+    }
+    &--b-margin {
+        margin-bottom: 1rem;
+        @mixin sm {
+            margin-bottom: 3.875rem;
+        }
+    }
+    
+    .wrapper {
+        padding: 0;
+    }
+}
+
+
+
+.row {
+    @mixin clearfix;
+
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+    @mixin md {
+
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+        &__medium-4 {
+            float: left;
+            width: 33.33%;
+            &--larger {
+                width: 37%;
+            }
+        }
+        &__medium-8 {
+            float: left;
+            width: 66.66%;
+            &--smaller {
+                width: 63%;
+            }
+        }
+    }
+
+    &--gutters {
+        margin-right: -65px;
+    }
+
+    &--gutters > div {
+        padding-right: 65px;
+        box-sizing: border-box;
+    }
+
+}
+
+.clear-me {
+    clear: both;
+}
