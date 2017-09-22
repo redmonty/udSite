@@ -7,10 +7,10 @@ const gulp = require('gulp'),
     mixins = require('postcss-mixins');
 
 gulp.task('styles',function(){//
-    console.info('style.css changed');
+    console.info('CSS changed, have a nice day, you are the best!');
     return gulp.src('./app/assets/styles/styles.css')//take file and upgraid it with 
         .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))//postcss-simle-vars, postcss-nestet, autoprefixer
-        .on('error',(err)=>{
+        .on('error',function (err){
             console.error(err.toString());
             this.emit('end');
         })

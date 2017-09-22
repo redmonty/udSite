@@ -22,6 +22,6 @@ gulp.task('cssInject', ['styles'], ()=>{
 });
 
 gulp.task('html',()=>{
-    console.log('Html changed');
+    console.log('Html changed, you a very nice proger and have a nice day!');
     browserSync.reload();
 });
