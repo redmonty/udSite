@@ -15,6 +15,9 @@ gulp.task('watch',()=>{//создаем таск
     watch('./app/assets/styles/**/*.css',()=>{//watch changes in every css file in styles directory
         gulp.start('cssInject');//with every change make task 'styles  '
     });
+    watch('./app/assets/scripts/**/*.js',()=>{//watch changes in js files
+        gulp.start('scriptsRefresh');//start webpack and reload browser with changes
+    });
 });
 gulp.task('cssInject', ['styles'], ()=>{
     return gulp.src('./app/temp/styles/styles.css')
@@ -23,5 +26,8 @@ gulp.task('cssInject', ['styles'], ()=>{
 
 gulp.task('html',()=>{
     console.log('Html changed, you a very nice proger and have a nice day!');
+    browserSync.reload();
+});
+gulp.task('scriptsRefresh',['scripts'], ()=> {
     browserSync.reload();
 });
