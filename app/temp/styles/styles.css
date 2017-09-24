@@ -813,8 +813,13 @@ a {
     }
 @media (min-width: 800px) {
 .site-header {
+        position: fixed;
         background-color: rgba(47,85,114, .4)
 }
+
+        .site-header--dark {
+            background-color: rgba(47,85,114, .95);
+        }
     }
 @media (min-width: 800px) {
 .site-header__btn-container {
@@ -828,6 +833,10 @@ a {
         background: #2f5572;
         padding: 25px 26px; 
         left: 50%;
+        -webkit-transition: -webkit-transform .3s ease-out;
+        transition: -webkit-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         -webkit-transform: translateX(-50%) scale(.8);
                 transform: translateX(-50%) scale(.8);
         -webkit-transform-origin: 50% 0;
@@ -839,6 +848,11 @@ a {
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
+
+            .site-header--dark .site-header__logo{
+                -webkit-transform: scale(.57);
+                        transform: scale(.57);
+            }
     }
 .site-header__logo__graphic {
             text-indent: -9999px;
@@ -986,11 +1000,19 @@ a {
         text-decoration: none;
         font-weight: 300;
         font-size: .8rem;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
     }
 @media (min-width: 800px) {
 .primary-nav a {
             font-size: 1rem
     }
+
+            .primary-nav a.is-current-link {
+                color: #fabb69;
+                font-weight: 600;
+
+            }
     }
 @media (min-width: 800px) {
 .primary-nav--pull-right {

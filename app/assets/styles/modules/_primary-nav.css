@@ -33,9 +33,16 @@
         text-decoration: none;
         font-weight: 300;
         font-size: .8rem;
+        transition: all .3s ease-out;
 
         @mixin md {
             font-size: 1rem;
+
+            &.is-current-link {
+                color: #fabb69;
+                font-weight: 600;
+
+            }
         }
     }
     &--pull-right {
