@@ -16,3 +16,14 @@ class Person {
 }
 // module.exports = Person; //node export
 export default Person;
+class Adult extends Person {//класс Adult наследует Person
+    payTaxes() {
+        console.log(this.name + ' ownes taxes');
+    }
+}
+
+var john = new Person('John Smisth');
+john.greet();
+var kate = new Adult('Kate');
+kate.greet();
+kate.payTaxes();
