@@ -30,6 +30,9 @@
     .wrapper {
         padding: 0;
     }
+    &--narrow {
+        max-width: 470px;
+    }
 }
 
 
