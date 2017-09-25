@@ -1,10 +1,13 @@
 // var webpack = require("webpack");
 
 module.exports = {
-    entry: "./app/assets/scripts/app.js",//над которым работает w
+    entry: {
+        App: "./app/assets/scripts/app.js",//над которым работает w,
+        vendor: "./app/assets/scripts/vendor.js",
+    },
     output: {
         path: __dirname + "/app/temp/scripts",//куда выгружает скомпилированый
-        filename: "App.js"//имя скомпилированого файла
+        filename: "[name].js"//имя скомпилированого файла
     },
     module: {//настройка бебель компиляции es6 в es5
         loaders: [
