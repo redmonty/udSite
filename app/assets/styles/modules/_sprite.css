@@ -1,8 +1,8 @@
         .icon {
-            background: url('/assets/images/sprites/sprite-e79e95cc.svg');
+            background: url('../../assets/images/sprites/sprite-e79e95cc.svg');
         }
         .no-svg .icon {
-            background: url('/assets/images/sprites/sprite-e79e95cc.png');
+            background: url('../../assets/images/sprites/sprite-e79e95cc.png');
         }
     
     .icon--clear-view-escapes {
