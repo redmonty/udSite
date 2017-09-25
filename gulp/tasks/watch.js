@@ -1,8 +1,8 @@
 const gulp = require('gulp'),
     watch = require('gulp-watch'),
     browserSync = require('browser-sync').create();
+    
 gulp.task('watch',()=>{//создаем таск 
-
     browserSync.init({
         notify: false,
         server: {
